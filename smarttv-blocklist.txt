@@ -1,0 +1,194 @@
+# Smart TV Tracking / Telemetry / ACR / Ads Blocklist
+# Format: one domain per line (pfBlockerNG DNSBL compatible)
+# pfBlockerNG blocks subdomains of each entry automatically when
+# "TLD" / wildcard blocking is enabled.
+# Generated: 2026-11-09
+#
+# Sections marked "MAY BREAK" can affect updates, app stores or
+# streaming apps. Test them before leaving them in place.
+
+# ===================== SAMSUNG (Tizen) =====================
+samsungacr.com
+acr0.samsungcloudsolution.com
+log-config.samsungacr.com
+log-ingestion.samsungacr.com
+log-ingestion-eu.samsungacr.com
+samsungads.com
+ads.samsungads.com
+config.samsungads.com
+samsung-com.112.2o7.net
+analytics.samsungknox.com
+noticecdn.samsungcloudsolution.com
+noticecdn.samsungcloudsolution.net
+samsungqbe.com
+samsungrm.net
+samsungtifa.com
+nmetrics.samsung.com
+lcprd1.samsungcloudsolution.net
+lcprd2.samsungcloudsolution.net
+gpm.samsungqbe.com
+infolink.pavv.co.kr
+samsungotn.net
+# Samsung TV Plus ad/tracking
+# MAY BREAK (firmware / app updates on Samsung):
+# osb.samsungqbe.com
+# otnprd9.samsungcloudsolution.net
+# samsungcloudsolution.com
+# samsungcloudsolution.net
+
+# ===================== LG (webOS) =====================
+lgad.cjpowercast.com
+lgsmartad.com
+ad.lgappstv.com
+us.ad.lgsmartad.com
+eu.ad.lgsmartad.com
+aic-ngfts.lge.com
+ngfts.lge.com
+us.info.lgsmartad.com
+info.lgsmartad.com
+lgtvsdp.com
+smartshare.lgtvsdp.com
+ibis.lgappstv.com
+us.ibs.lgappstv.com
+eu.ibs.lgappstv.com
+lgtvonline.lge.com
+alphonso.tv
+api.alphonso.tv
+# LG Channels ad / ACR
+# MAY BREAK (LG Content Store / updates):
+# snu.lge.com
+# lgappstv.com
+# us.lgeapi.com
+
+# ===================== SONY / Philips / TP Vision =====================
+tvsideview.sony.net
+smetrics.sony.com
+samba.tv
+samba.com
+platform.samba.tv
+cdn.samba.tv
+api.samba.tv
+tpvision.com
+nettvservices.tpvision.com
+# Philips older NetTV portal tracking
+nettvportal.com
+
+# ===================== VIZIO =====================
+tvinteractive.tv
+control.tvinteractive.tv
+vizio.com.akadns.net
+vizio.inscape.tv
+inscape.tv
+ds.vizio.com
+# MAY BREAK (SmartCast apps):
+# smartcast.vizio.com
+# scfs.vizio.com
+
+# ===================== ROKU (incl. Roku TV models) =====================
+ads.roku.com
+logs.roku.com
+cooper.logs.roku.com
+cloudservices.roku.com
+p.ads.roku.com
+austin.logs.roku.com
+giga.logs.roku.com
+display.ravm.tv
+ravm.tv
+# MAY BREAK (channel store / updates):
+# scribe.logs.roku.com
+# api.roku.com
+
+# ===================== TCL / Hisense / Vidaa / Toshiba =====================
+tcl-cdn.com
+tclclouds.com
+cn.tclclouds.com
+api.tclclouds.com
+hismarttv.com
+adapi.hismarttv.com
+# MAY BREAK (Vidaa app store / Hisense updates):
+# vidaa.com
+# hitv.hismarttv.com
+
+# ===================== AMAZON FIRE TV =====================
+device-metrics-us.amazon.com
+device-metrics-us-2.amazon.com
+mads.amazon.com
+mads-eu.amazon.com
+aax-us-east.amazon-adsystem.com
+amazon-adsystem.com
+aviary.amazon.com
+unagi.amazon.com
+unagi-na.amazon.com
+unagi-eu.amazon.com
+spectator.amazon.com
+fls-na.amazon.com
+fls-eu.amazon.com
+# MAY BREAK (Fire TV home / Prime Video):
+# softwareupdates.amazon.com
+# api.amazon.com
+
+# ===================== GOOGLE TV / ANDROID TV =====================
+www.googletagmanager.com
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+ade.googlesyndication.com
+pubads.g.doubleclick.net
+securepubads.g.doubleclick.net
+app-measurement.com
+firebaselogging.googleapis.com
+firebaselogging-pa.googleapis.com
+crashlytics.com
+settings.crashlytics.com
+# NOTE: Blocking these breaks Google TV recommendations rows and
+# can break YouTube / Play Store. Only uncomment if you accept that.
+# play.googleapis.com
+# connectivitycheck.gstatic.com
+
+# ===================== ACR / Ad-tech used across many TV brands =====================
+tvsquared.com
+collect.tvsquared.com
+innovid.com
+s.innovid.com
+tremorhub.com
+ads.tremorhub.com
+spotx.tv
+spotxchange.com
+search.spotxchange.com
+freewheel.tv
+mssl.fwmrm.net
+2mdn.net
+imasdk.googleapis.com
+adsrvr.org
+moatads.com
+doubleverify.com
+nielsen.com
+imrworldwide.com
+secure-us.imrworldwide.com
+cdn.imrworldwide.com
+comscore.com
+scorecardresearch.com
+sb.scorecardresearch.com
+conviva.com
+cws.conviva.com
+pings.conviva.com
+mparticle.com
+branch.io
+appsflyer.com
+adjust.com
+amplitude.com
+api.amplitude.com
+mixpanel.com
+api.mixpanel.com
+segment.io
+api.segment.io
+bugsnag.com
+sessions.bugsnag.com
+newrelic.com
+bam.nr-data.net
+js-agent.newrelic.com
+
+# ===================== HbbTV (EU broadcast red-button tracking) =====================
+tvping.com
+smartclip.net
+ad.smartclip.net
+xiti.com
