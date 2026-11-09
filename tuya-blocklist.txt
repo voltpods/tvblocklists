@@ -1,0 +1,52 @@
+! Title: Tuya / Smart Life Cloud Blocklist
+! Description: Blocks the Tuya IoT cloud (Smart Life, Tuya Smart and white-label Tuya apps/devices).
+! Homepage: https://github.com/voltpods/tvblocklists
+! Last modified: 2026-11-09
+! Expires: 7 days
+! Format: AdGuard Home / AdGuard DNS filter syntax. ||domain^ also blocks every subdomain.
+!
+! WHAT THIS BREAKS
+!   Blocking these cuts Tuya devices off from the cloud entirely:
+!   - Smart Life / Tuya Smart app control (including on the LAN in most cases),
+!     voice assistants (Alexa/Google), and cloud integrations (HA "Tuya" integration, Homey).
+!   - Pairing of NEW devices and firmware (OTA) updates.
+!   Local control (LocalTuya, tinytuya, tuya-local) keeps working, but only if you
+!   captured each device's local_key BEFORE blocking. Some devices reboot or
+!   blink while they can't reach the cloud. Block DNS and outbound traffic together.
+!   Easiest: apply this list only to the IoT clients/VLAN in AdGuard Home
+!   (Settings > Client settings) instead of globally, so the app on phones keeps working.
+
+! ===================== Tuya regional clouds =====================
+! Each base domain covers all of its subdomains, including:
+!   a1.* / a2.* / a.gw.*            HTTPS device gateway (activation, config, reporting)
+!   m1.* / m2.* / mq.gw.* / mq.gw1.* MQTT device connection (port 8883 / 1883)
+!   openapi.* / openapi-ueaz.* / openapi-weaz.*   Cloud OpenAPI (integrations)
+!   mqe.*                           Pulsar message queue (wss :8285)
+!   images.* / fireware.*           CDN / OTA firmware downloads
+! Americas (US West + US East)
+||tuyaus.com^
+! Europe (Central + Western)
+||tuyaeu.com^
+! China
+||tuyacn.com^
+! India
+||tuyain.com^
+
+! ===================== Tuya corporate / app / developer =====================
+! iot.tuya.com developer platform, auth, app config, support
+||tuya.com^
+! Tuya Smart app domain
+||tuyasmart.com^
+
+! ===================== UNVERIFIED: check your query log before enabling =====================
+! Mentioned in community guides but not confirmed as Tuya-owned. Uncomment
+! only if your AdGuard query log shows Tuya devices or apps using them.
+! ||smartlife.com^
+! ||wgine.com^
+
+! ===================== NOT BLOCKED ON PURPOSE =====================
+! Tuya also stores firmware/media on shared cloud storage
+! (*.aliyuncs.com, *.amazonaws.com, *.myqcloud.com, e.g. "airtake-*" buckets).
+! Blocking those whole domains would break large parts of the internet. If needed,
+! add the exact hostnames from your query log, e.g.:
+! ||airtake-public-data.oss-us-west-1.aliyuncs.com^
